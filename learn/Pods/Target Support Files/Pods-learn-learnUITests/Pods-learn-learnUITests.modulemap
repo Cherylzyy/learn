@@ -1,0 +1,6 @@
+framework module Pods_learn_learnUITests {
+  umbrella header "Pods-learn-learnUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
