@@ -11,6 +11,18 @@ target 'learn' do
   
   # https://github.com/Tencent/MLeaksFinder.git
   pod 'MLeaksFinder'
+  
+  # https://github.com/SDWebImage/SDWebImage
+  pod 'SDWebImage', '~> 5.0'
+  
+  # https://github.com/ibireme/YYModel
+  pod 'YYModel'
+  
+  # https://github.com/ibireme/YYKit
+  pod 'YYKit'
+  
+  # https://github.com/SnapKit/Masonry
+  pod 'Masonry'
 
   target 'learnTests' do
     inherit! :search_paths
