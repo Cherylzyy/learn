@@ -31,6 +31,15 @@ post_install do|installer|
    find_and_replace("Pods/FBRetainCycleDetector/fishhook/fishhook.c",
    "indirect_symbol_bindings[i] = cur->rebindings[j].replacement;", "if (i < (sizeof(indirect_symbol_bindings) /
         sizeof(indirect_symbol_bindings[0]))) { \n indirect_symbol_bindings[i]=cur->rebindings[j].replacement; \n }")
+    
+    #解决问题将引入的三方sdk的target设置为12.0
+    installer.generated_projects.each do |project|
+          project.targets.each do |target|
+              target.build_configurations.each do |config|
+                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+               end
+          end
+    end
 end
 
 def find_and_replace(dir, findstr, replacestr)
