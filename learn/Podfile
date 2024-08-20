@@ -7,10 +7,10 @@ target 'learn' do
 
   # Pods for learn
   # https://github.com/AFNetworking/AFNetworking.git
-  #pod 'AFNetworking', '~> 4.0'
+  pod 'AFNetworking', '~> 4.0'
   
   # https://github.com/Tencent/MLeaksFinder.git
-  #pod 'MLeaksFinder'
+  pod 'MLeaksFinder'
 
   target 'learnTests' do
     inherit! :search_paths
